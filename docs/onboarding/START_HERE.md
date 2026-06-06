@@ -34,11 +34,11 @@ Kronos output is forecast input. Kronos output is not order authority, risk auth
 
 ## Runtime Status
 
-Kronos runtime status is UNKNOWN.
+Kronos runtime status is PARTIAL.
 
-The previous Python 3.13 audit failed before meaningful runtime evidence. The next intended package is KRONOS-002, a Python 3.10/3.11 runtime audit and reproducibility proof.
+KRONOS-002 produced Python 3.11 CPU evidence: dependency install succeeded, targeted pinned regression tests passed, Hugging Face checkpoints were public/ungated, minimal inference ran, and fixed-seed CPU repeatability matched exactly. Remaining blockers: full `pytest -q` collects `finetune/qlib_test.py` and fails without `qlib`; README example data is missing; GPU/MPS behavior is unavailable and untested.
 
-Do not run KRONOS-002 work in KRONOS-001.
+Use [runtime environment guidance](../runtime/ENVIRONMENT.md) and the [runtime checklist](../runtime/RUNTIME_CHECKLIST.md) before any future runtime work.
 
 ## Next Read Order
 
@@ -48,6 +48,8 @@ Do not run KRONOS-002 work in KRONOS-001.
 4. [Decision log](../architecture/DECISION_LOG.md)
 5. [Forbidden scope](../boundaries/FORBIDDEN_SCOPE.md)
 6. [Codex operating model](../operations/CODEX_OPERATING_MODEL.md)
-7. [WP drafting guide](../operations/WP_DRAFTING_GUIDE.md)
-8. [WP review guide](../operations/WP_REVIEW_GUIDE.md)
-9. [Token and context hygiene](../operations/TOKEN_CONTEXT_HYGIENE.md)
+7. [Runtime environment guidance](../runtime/ENVIRONMENT.md)
+8. [Runtime checklist](../runtime/RUNTIME_CHECKLIST.md)
+9. [WP drafting guide](../operations/WP_DRAFTING_GUIDE.md)
+10. [WP review guide](../operations/WP_REVIEW_GUIDE.md)
+11. [Token and context hygiene](../operations/TOKEN_CONTEXT_HYGIENE.md)
