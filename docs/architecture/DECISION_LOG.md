@@ -13,14 +13,15 @@ This file records accepted, open, deferred, rejected/forbidden, and future-optio
 - Simple baselines are required to measure Kronos value.
 - Classic indicators are not banned.
 - Architecture stance is Kronos forecast-artifact core + custom multi-asset data/research/risk layers + hybrid tooling where useful + execution routers much later.
+- KRONOS-002 runtime status is PARTIAL based on Python 3.11 CPU evidence: dependency install succeeded, targeted pinned regression tests passed, Hugging Face checkpoints were public/ungated, minimal inference ran, and fixed-seed CPU repeatability matched exactly.
 
 Classic indicators remain useful as baselines, filters, risk features, sanity checks, regime descriptors, interpretable confluence, and fallback comparisons.
 
 ## Current Runtime Status
 
-- Runtime status UNKNOWN.
-- Previous Python 3.13 audit failed before meaningful runtime evidence.
-- Python 3.10/3.11 audit required next.
+- Runtime status PARTIAL.
+- KRONOS-002 audit: Python 3.11 CPU path works for install, targeted regression, Hugging Face access, minimal inference, and exact fixed-seed repeatability.
+- Remaining runtime blockers: full `pytest -q` fails collecting `finetune/qlib_test.py` without `qlib`; README example data is missing; GPU/MPS behavior is unavailable and untested.
 
 ## Current Empirical Lean
 
@@ -37,6 +38,8 @@ Classic indicators remain useful as baselines, filters, risk features, sanity ch
 - Future brokers/exchanges.
 - Artifact tooling choice.
 - vectorbt/Qlib/Freqtrade/Nautilus support-tooling decisions.
+- Whether `qlib` test collection should be optional, separately documented, or supported by a development dependency path.
+- Whether README example data should be restored, externally documented, or example behavior updated in a later package.
 
 ## Deferred Decisions
 
@@ -46,6 +49,7 @@ Classic indicators remain useful as baselines, filters, risk features, sanity ch
 - multi-market ingestion engine deferred
 - Kronos inference service deferred
 - paper/live trading deferred
+- GPU/CUDA runtime audit deferred until suitable hardware is available.
 
 ## Candidate Parameters Not Locked
 

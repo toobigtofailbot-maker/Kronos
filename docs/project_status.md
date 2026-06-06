@@ -7,8 +7,10 @@ Status: onboarding / planning baseline.
 - Kronos source truth: `toobigtofailbot-maker/Kronos`.
 - Reference-only repo: `crypto-perp-wedge`.
 - Architecture stance: Kronos-centered, multi-asset, forecast-artifact-centered, custom-runner / hybrid, execution much later.
-- Runtime status: UNKNOWN.
-- Next intended package: KRONOS-002 Python 3.10/3.11 runtime audit and reproducibility proof.
+- Runtime status: PARTIAL.
+- Runtime reason: Python 3.11 install, pinned CPU regression tests, Hugging Face access, minimal inference, and exact fixed-seed CPU repeatability passed; full pytest collection, README example data, and GPU/MPS behavior remain blocked or untested.
+- Runtime audit: [KRONOS runtime audit](runtime/KRONOS_RUNTIME_AUDIT.md).
+- Next intended package: KRONOS-003 environment/runtime guidance update based on audit.
 - First empirical lean: crypto BTC/ETH 1h.
 - NQQ unresolved: may mean QQQ, NQ, MNQ, or Nasdaq-100 exposure generally.
 
@@ -21,17 +23,15 @@ Status: onboarding / planning baseline.
 
 ## What Is Unknown
 
-Kronos runtime status is UNKNOWN.
+Kronos runtime status is PARTIAL.
 
-The previous Python 3.13 audit failed before meaningful runtime evidence. Python 3.10/3.11 audit is required next.
-
-Do not imply that Kronos installs successfully, tests pass, Hugging Face checkpoints are accessible, forecasting works, determinism is proven, latency/memory are known, or CPU/GPU behavior is known until KRONOS-002 or a later approved runtime package produces evidence.
+KRONOS-002 produced Python 3.11 CPU evidence: dependency install succeeded, targeted pinned regression tests passed, Hugging Face checkpoints were public/ungated, minimal inference ran, and fixed-seed CPU repeatability matched exactly. Remaining blockers: full `pytest -q` collects `finetune/qlib_test.py` and fails without `qlib`; README example data is missing; GPU/MPS behavior is unavailable and untested.
 
 Open user decisions include NQQ interpretation, first empirical asset class/timeframe, hardware/GPU availability, data budget, future brokers/exchanges, and artifact/tooling choices.
 
 ## Forbidden Current Work
 
-Do not perform execution, risk automation, strategy optimization, data ingestion, fine-tuning, model refactors, tokenizer refactors, dependency changes, runtime audit, Hugging Face downloads, model inference, forecast artifact creation, portfolio logic, or OMS/execution work in KRONOS-001.
+Do not perform execution, risk automation, strategy optimization, data ingestion, fine-tuning, model refactors, tokenizer refactors, dependency changes, forecast artifact creation, portfolio logic, or OMS/execution work outside an approved package.
 
 Kronos output is forecast input. Kronos output is not order authority, risk authority, portfolio authority, or strategy-promotion authority.
 
