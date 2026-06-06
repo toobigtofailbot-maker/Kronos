@@ -14,6 +14,7 @@ This file records accepted, open, deferred, rejected/forbidden, and future-optio
 - Classic indicators are not banned.
 - Architecture stance is Kronos forecast-artifact core + custom multi-asset data/research/risk layers + hybrid tooling where useful + execution routers much later.
 - KRONOS-002 runtime status is PARTIAL based on Python 3.11 CPU evidence: dependency install succeeded, targeted pinned regression tests passed, Hugging Face checkpoints were public/ungated, minimal inference ran, and fixed-seed CPU repeatability matched exactly.
+- KRONOS-003 documents Python 3.11 as the current proven runtime-guidance path based on KRONOS-002, with targeted regression as the current proven test command.
 
 Classic indicators remain useful as baselines, filters, risk features, sanity checks, regime descriptors, interpretable confluence, and fallback comparisons.
 
@@ -40,6 +41,8 @@ Classic indicators remain useful as baselines, filters, risk features, sanity ch
 - vectorbt/Qlib/Freqtrade/Nautilus support-tooling decisions.
 - Whether `qlib` test collection should be optional, separately documented, or supported by a development dependency path.
 - Whether README example data should be restored, externally documented, or example behavior updated in a later package.
+- pytest/dev dependency policy remains open.
+- Example data/example path behavior remains open.
 
 ## Deferred Decisions
 
@@ -50,6 +53,7 @@ Classic indicators remain useful as baselines, filters, risk features, sanity ch
 - Kronos inference service deferred
 - paper/live trading deferred
 - GPU/CUDA runtime audit deferred until suitable hardware is available.
+- GPU/MPS audit remains deferred.
 
 ## Candidate Parameters Not Locked
 
