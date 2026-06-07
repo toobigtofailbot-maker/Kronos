@@ -15,6 +15,8 @@ This file records accepted, open, deferred, rejected/forbidden, and future-optio
 - Architecture stance is Kronos forecast-artifact core + custom multi-asset data/research/risk layers + hybrid tooling where useful + execution routers much later.
 - KRONOS-002 runtime status is PARTIAL based on Python 3.11 CPU evidence: dependency install succeeded, targeted pinned regression tests passed, Hugging Face checkpoints were public/ungated, minimal inference ran, and fixed-seed CPU repeatability matched exactly.
 - KRONOS-003 documents Python 3.11 as the current proven runtime-guidance path based on KRONOS-002, with targeted regression as the current proven test command.
+- KRONOS-004 defines canonical multi-asset OHLCVA and Kronos input contracts as docs-only design.
+- KRONOS-004 accepts Binance USDT-M trade-price klines as the provisional first crypto-perp OHLCVA mapping for future BTC/ETH 1h specialization.
 
 Classic indicators remain useful as baselines, filters, risk features, sanity checks, regime descriptors, interpretable confluence, and fallback comparisons.
 
@@ -28,6 +30,7 @@ Classic indicators remain useful as baselines, filters, risk features, sanity ch
 
 - First empirical lean: crypto BTC/ETH 1h.
 - This is not a permanent crypto-only decision.
+- First empirical target still needs KRONOS-005 specialization.
 
 ## Open Decisions
 
@@ -43,6 +46,10 @@ Classic indicators remain useful as baselines, filters, risk features, sanity ch
 - Whether README example data should be restored, externally documented, or example behavior updated in a later package.
 - pytest/dev dependency policy remains open.
 - Example data/example path behavior remains open.
+- Equities/ETFs, futures, and FX vendor-specific mappings remain deferred.
+- Non-core feature stream contracts remain deferred.
+- Validator implementation remains deferred.
+- Whether `amount` can be nullable for asset classes without official turnover remains open.
 
 ## Deferred Decisions
 
@@ -54,6 +61,7 @@ Classic indicators remain useful as baselines, filters, risk features, sanity ch
 - paper/live trading deferred
 - GPU/CUDA runtime audit deferred until suitable hardware is available.
 - GPU/MPS audit remains deferred.
+- KRONOS-005 first empirical market/timeframe data contract deferred until KRONOS-004 review/merge.
 
 ## Candidate Parameters Not Locked
 

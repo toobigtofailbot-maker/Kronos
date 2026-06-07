@@ -11,7 +11,8 @@ Status: onboarding / planning baseline.
 - Runtime reason: Python 3.11 install, pinned CPU regression tests, Hugging Face access, minimal inference, and exact fixed-seed CPU repeatability passed; full pytest collection, README example data, and GPU/MPS behavior remain blocked or untested.
 - Runtime audit: [KRONOS runtime audit](runtime/KRONOS_RUNTIME_AUDIT.md).
 - Runtime guidance: [environment guidance](runtime/ENVIRONMENT.md) and [runtime checklist](runtime/RUNTIME_CHECKLIST.md).
-- Next intended package: KRONOS-004 multi-asset data contract design.
+- Data contracts: [multi-asset data contract](data/MULTI_ASSET_DATA_CONTRACT.md) and [Kronos input contract](data/KRONOS_INPUT_CONTRACT.md).
+- Next intended package: KRONOS-005 first empirical market/timeframe data contract.
 - First empirical lean: crypto BTC/ETH 1h.
 - NQQ unresolved: may mean QQQ, NQ, MNQ, or Nasdaq-100 exposure generally.
 
@@ -44,8 +45,10 @@ Kronos output is forecast input. Kronos output is not order authority, risk auth
 4. [Decision log](architecture/DECISION_LOG.md)
 5. [Forbidden scope](boundaries/FORBIDDEN_SCOPE.md)
 6. [Codex operating model](operations/CODEX_OPERATING_MODEL.md)
-7. [Runtime environment guidance](runtime/ENVIRONMENT.md)
-8. [Runtime checklist](runtime/RUNTIME_CHECKLIST.md)
-9. [WP drafting guide](operations/WP_DRAFTING_GUIDE.md)
-10. [WP review guide](operations/WP_REVIEW_GUIDE.md)
-11. [Token and context hygiene](operations/TOKEN_CONTEXT_HYGIENE.md)
+7. [Multi-asset data contract](data/MULTI_ASSET_DATA_CONTRACT.md)
+8. [Kronos input contract](data/KRONOS_INPUT_CONTRACT.md)
+9. [Runtime environment guidance](runtime/ENVIRONMENT.md)
+10. [Runtime checklist](runtime/RUNTIME_CHECKLIST.md)
+11. [WP drafting guide](operations/WP_DRAFTING_GUIDE.md)
+12. [WP review guide](operations/WP_REVIEW_GUIDE.md)
+13. [Token and context hygiene](operations/TOKEN_CONTEXT_HYGIENE.md)
