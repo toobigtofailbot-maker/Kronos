@@ -11,10 +11,11 @@ Status: onboarding / planning baseline.
 - Runtime reason: Python 3.11 install, pinned CPU regression tests, Hugging Face access, minimal inference, and exact fixed-seed CPU repeatability passed; full pytest collection, README example data, and GPU/MPS behavior remain blocked or untested.
 - Runtime audit: [KRONOS runtime audit](runtime/KRONOS_RUNTIME_AUDIT.md).
 - Runtime guidance: [environment guidance](runtime/ENVIRONMENT.md) and [runtime checklist](runtime/RUNTIME_CHECKLIST.md).
-- Data contracts: [multi-asset data contract](data/MULTI_ASSET_DATA_CONTRACT.md) and [Kronos input contract](data/KRONOS_INPUT_CONTRACT.md).
-- Next intended package: KRONOS-005 first empirical market/timeframe data contract.
-- First empirical lean: crypto BTC/ETH 1h.
-- NQQ unresolved: may mean QQQ, NQ, MNQ, or Nasdaq-100 exposure generally.
+- Data contracts: [multi-asset data contract](data/MULTI_ASSET_DATA_CONTRACT.md), [Kronos input contract](data/KRONOS_INPUT_CONTRACT.md), and [crypto 1h first empirical target](data/CRYPTO_1H_FIRST_TARGET.md).
+- Accepted first empirical target: BTCUSDT + ETHUSDT Binance USDT-M perpetuals, 1h trade-price klines.
+- Long-term direction: multi-asset opportunity discovery.
+- NQQ clarification: NQQ was a spelling mistake and means general Nasdaq-100 exposure for now; exact instrument remains unresolved.
+- Next intended package: KRONOS-006 forecast artifact design.
 
 ## What Is Known
 
@@ -29,7 +30,7 @@ Kronos runtime status is PARTIAL.
 
 KRONOS-002 produced Python 3.11 CPU evidence: dependency install succeeded, targeted pinned regression tests passed, Hugging Face checkpoints were public/ungated, minimal inference ran, and fixed-seed CPU repeatability matched exactly. Remaining blockers: full `pytest -q` collects `finetune/qlib_test.py` and fails without `qlib`; README example data is missing; GPU/MPS behavior is unavailable and untested.
 
-Open user decisions include NQQ interpretation, first empirical asset class/timeframe, hardware/GPU availability, data budget, future brokers/exchanges, and artifact/tooling choices.
+Open user decisions include exact Nasdaq-100 instrument, future data acquisition/storage formats, GPU/CUDA validation, paid-data budget/vendor gates, future brokers/exchanges, and artifact/tooling choices. See [decision log](architecture/DECISION_LOG.md).
 
 ## Forbidden Current Work
 
@@ -47,8 +48,9 @@ Kronos output is forecast input. Kronos output is not order authority, risk auth
 6. [Codex operating model](operations/CODEX_OPERATING_MODEL.md)
 7. [Multi-asset data contract](data/MULTI_ASSET_DATA_CONTRACT.md)
 8. [Kronos input contract](data/KRONOS_INPUT_CONTRACT.md)
-9. [Runtime environment guidance](runtime/ENVIRONMENT.md)
-10. [Runtime checklist](runtime/RUNTIME_CHECKLIST.md)
-11. [WP drafting guide](operations/WP_DRAFTING_GUIDE.md)
-12. [WP review guide](operations/WP_REVIEW_GUIDE.md)
-13. [Token and context hygiene](operations/TOKEN_CONTEXT_HYGIENE.md)
+9. [Crypto 1h first empirical target](data/CRYPTO_1H_FIRST_TARGET.md)
+10. [Runtime environment guidance](runtime/ENVIRONMENT.md)
+11. [Runtime checklist](runtime/RUNTIME_CHECKLIST.md)
+12. [WP drafting guide](operations/WP_DRAFTING_GUIDE.md)
+13. [WP review guide](operations/WP_REVIEW_GUIDE.md)
+14. [Token and context hygiene](operations/TOKEN_CONTEXT_HYGIENE.md)

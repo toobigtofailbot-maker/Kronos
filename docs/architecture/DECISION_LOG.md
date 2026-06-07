@@ -17,6 +17,20 @@ This file records accepted, open, deferred, rejected/forbidden, and future-optio
 - KRONOS-003 documents Python 3.11 as the current proven runtime-guidance path based on KRONOS-002, with targeted regression as the current proven test command.
 - KRONOS-004 defines canonical multi-asset OHLCVA and Kronos input contracts as docs-only design.
 - KRONOS-004 accepts Binance USDT-M trade-price klines as the provisional first crypto-perp OHLCVA mapping for future BTC/ETH 1h specialization.
+- KRONOS-005 specializes the first empirical target as BTCUSDT and ETHUSDT Binance USDT-M perpetual trade-price klines at 1h, docs-only.
+- The project's long-term goal is multi-asset opportunity discovery / market opportunity scanning, not crypto-only.
+- The KRONOS-005 first empirical target does not limit long-term architecture.
+- NQQ was a spelling mistake and means general Nasdaq-100 exposure for now; QQQ, NQ, MNQ, and other Nasdaq-100 exposures remain possible future instruments.
+- Current local hardware includes Windows x64, Intel Core Ultra 7 155H CPU, 32 GB RAM, approximately 2 TB NVMe storage, NVIDIA RTX 4050 Laptop GPU with 6 GB VRAM, and Intel Arc iGPU.
+- CPU inference path is proven by KRONOS-002; local NVIDIA GPU remains unvalidated; Apple MPS is not applicable on this machine.
+- Data-source policy starts free / low-cost; no paid-feed dependency is accepted for the first empirical proof.
+- Future broker/exchange account options may include Binance, Alpaca, and IBKR, but they are not execution authorization.
+- Zero-shot forecast work comes first; fine-tuning remains deferred.
+- Paper/live trading remains distant.
+- `vectorbt` may be evaluated later as support tooling, not as the architecture center.
+- Qlib remains reference-only/deferred and must not be added as a core dependency now.
+- Freqtrade and Nautilus are deferred until forecast artifacts, evaluation, and baseline evidence exist.
+- Artifact tracking starts lightweight; DVC, MLflow, Pandera, Great Expectations, or similar tools are later evaluation candidates.
 
 Classic indicators remain useful as baselines, filters, risk features, sanity checks, regime descriptors, interpretable confluence, and fallback comparisons.
 
@@ -28,18 +42,20 @@ Classic indicators remain useful as baselines, filters, risk features, sanity ch
 
 ## Current Empirical Lean
 
-- First empirical lean: crypto BTC/ETH 1h.
+- First empirical target: BTCUSDT and ETHUSDT Binance USDT-M perpetual trade-price klines at 1h.
 - This is not a permanent crypto-only decision.
-- First empirical target still needs KRONOS-005 specialization.
+- Long-term timeframe ambition is roughly 5m to 1d, sequenced later.
 
 ## Open Decisions
 
-- NQQ unresolved: may mean QQQ, NQ, MNQ, or Nasdaq-100 exposure generally.
-- First empirical asset class.
-- First empirical timeframe.
-- Hardware / GPU availability.
-- Data budget.
-- Future brokers/exchanges.
+- Exact Nasdaq-100 instrument remains unresolved: QQQ ETF, NQ futures, MNQ futures, or other Nasdaq-100 exposure.
+- Data acquisition method for the first empirical target.
+- Raw data file format.
+- Normalized storage format.
+- Gap manifest format.
+- Non-core feature stream contracts.
+- GPU/CUDA readiness remains unvalidated.
+- Paid data vendors and exact budget remain future gated decisions.
 - Artifact tooling choice.
 - vectorbt/Qlib/Freqtrade/Nautilus support-tooling decisions.
 - Whether `qlib` test collection should be optional, separately documented, or supported by a development dependency path.
@@ -55,13 +71,17 @@ Classic indicators remain useful as baselines, filters, risk features, sanity ch
 
 - fine-tuning deferred
 - execution deferred
+- broker/exchange/API integration deferred
 - portfolio/risk simulation deferred
 - multi-market ingestion engine deferred
+- data adapter implementation deferred
+- validator implementation deferred
 - Kronos inference service deferred
 - paper/live trading deferred
 - GPU/CUDA runtime audit deferred until suitable hardware is available.
 - GPU/MPS audit remains deferred.
-- KRONOS-005 first empirical market/timeframe data contract deferred until KRONOS-004 review/merge.
+- paid data vendor and budget decisions deferred
+- heavier artifact/validation tools deferred
 
 ## Candidate Parameters Not Locked
 
