@@ -24,7 +24,7 @@ This project is Kronos-centered, multi-asset over time, forecast-artifact-center
 
 Kronos is central because this repo contains the Kronos model, tokenizer, predictor, examples, regression tests, fine-tuning material, and web UI. Those facts make Kronos the starting point for this side project, but they do not prove local runtime status.
 
-The system is multi-asset over time. Crypto may be the first empirical lean, but the project must preserve future support for equities/ETFs, Nasdaq-100 exposure, index futures, FX, and other liquid markets where justified.
+The system is multi-asset opportunity discovery over time. The near-term proof path is BTCUSDT and ETHUSDT Binance USDT-M perpetual trade-price klines at 1h, but the project must preserve future support for equities/ETFs, Nasdaq-100 exposure, index futures, FX, and other liquid markets where justified.
 
 ## What This Project Is Not
 
@@ -50,8 +50,9 @@ Use [runtime environment guidance](../runtime/ENVIRONMENT.md) and the [runtime c
 6. [Codex operating model](../operations/CODEX_OPERATING_MODEL.md)
 7. [Multi-asset data contract](../data/MULTI_ASSET_DATA_CONTRACT.md)
 8. [Kronos input contract](../data/KRONOS_INPUT_CONTRACT.md)
-9. [Runtime environment guidance](../runtime/ENVIRONMENT.md)
-10. [Runtime checklist](../runtime/RUNTIME_CHECKLIST.md)
-11. [WP drafting guide](../operations/WP_DRAFTING_GUIDE.md)
-12. [WP review guide](../operations/WP_REVIEW_GUIDE.md)
-13. [Token and context hygiene](../operations/TOKEN_CONTEXT_HYGIENE.md)
+9. [Crypto 1h first empirical target](../data/CRYPTO_1H_FIRST_TARGET.md)
+10. [Runtime environment guidance](../runtime/ENVIRONMENT.md)
+11. [Runtime checklist](../runtime/RUNTIME_CHECKLIST.md)
+12. [WP drafting guide](../operations/WP_DRAFTING_GUIDE.md)
+13. [WP review guide](../operations/WP_REVIEW_GUIDE.md)
+14. [Token and context hygiene](../operations/TOKEN_CONTEXT_HYGIENE.md)
